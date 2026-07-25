@@ -62,8 +62,7 @@ class SignupPage(BasePage):
     def click_continue_button(self):
         self.page.get_by_role("link", name="Continue").click()
     
-    def expect_logged_in_as_visible(self, name):
-        expect(self.page.get_by_text(f"Logged in as {name}")).to_be_visible()
+    
     
 
 
