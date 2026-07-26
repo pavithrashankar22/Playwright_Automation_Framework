@@ -7,9 +7,9 @@ class AccountAPI:
     @staticmethod
     def create_account(account_data: dict):
         payload = {
-            "name": account_data["name"],
-            "email": account_data["email"],
-            "password": account_data["password"],
+            "name": account_data.get("name", ""),
+            "email": account_data.get("email", ""),
+            "password": account_data.get("password", ""),
             "title": "Mr" if account_data.get("gender", "male").lower() == "male" else "Mrs",
             "birth_date": account_data.get("day", "1"),
             "birth_month": account_data.get("month", "1"),
