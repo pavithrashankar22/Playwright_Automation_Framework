@@ -136,3 +136,13 @@ Start-Process allure-report\index.html
 
 - The project uses pytest markers such as `smoke`, `regression`, `api`, and `ui`.
 - The pytest configuration is stored in [pytest.ini](pytest.ini).
+
+## CI/CD with GitHub Actions
+
+A GitHub Actions workflow is included at [.github/workflows/pytest-allure.yml](.github/workflows/pytest-allure.yml). It will:
+
+- install dependencies
+- run the pytest suite
+- generate an Allure report
+- publish the report to GitHub Pages
+- upload the report as a workflow artifact
